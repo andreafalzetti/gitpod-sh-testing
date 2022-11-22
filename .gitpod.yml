@@ -1,6 +1,9 @@
 tasks:
   - command: curl lama.sh | sh -s -- -p 3000
+  - command: npx -y live-server ./website
 
 ports:
   - port: 3000
     onOpen: notify
+  - port: 8080
+    onOpen: open-preview
